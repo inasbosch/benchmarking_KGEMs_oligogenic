@@ -1,0 +1,7 @@
+ROOT = "/Users/inasbosch/Desktop/benchmarking_code/"
+DATASET_PATH = ROOT + "/data/"
+RVIS_FILE = DATASET_PATH + "pgen.1003709.s002.xlsx"
+HGNC_ENSEMBL_FILE = DATASET_PATH + "hgnc_ensembl.txt"
+EDGE2VEC_PATH = ROOT+"node_model/edge2vec-master/"
+DIGEPRED_PATH = "/Users/inasbosch/Desktop/benchmarking_code/DiGePred-main"
+DIEP_PATH = "/Users/inasbosch/Desktop/benchmarking_code/DIEP-main"
