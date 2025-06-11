@@ -10,3 +10,4 @@ The usage of this repository requires first the download of two separate github 
 The file `config/embedding_source_paths.py` should be edited so that the `ROOT`, `EDGE2VEC_PATH`, `DIGEPRED_PATH` and `DIEP_PATH` point to the respective repositories or datasets. 
 
 The required Python packages can be installed using `pip install -r requirements.txt` or `pip3 install -r requirements.txt`.
+
