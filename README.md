@@ -7,6 +7,6 @@ The usage of this repository requires first the download of two separate github 
 - The DiGePred repository can be downloaded from https://github.com/CapraLab/DiGePred. Several files containing the necessary biological data need to be downloaded as described in the repository.
 - Additionally, the Edge2vec Knowledge Graph Embedding Model also has an associated repository https://github.com/RoyZhengGao/edge2vec, which needs to be downloaded.
 
-The file `config/embedding_source_paths.py` should be edited so that the 'ROOT', 'EDGE2VEC_PATH', 'DIGEPRED_PATH' and 'DIEP_PATH' point to the respective repositories or datasets. 
+The file `config/embedding_source_paths.py` should be edited so that the `ROOT`, `EDGE2VEC_PATH`, `DIGEPRED_PATH` and `DIEP_PATH` point to the respective repositories or datasets. 
 
-The required Python packages can be installed using 'pip install -r requirements.txt'.
+The required Python packages can be installed using `pip install -r requirements.txt` or `pip3 install -r requirements.txt`.
