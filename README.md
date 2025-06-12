@@ -11,7 +11,7 @@ The file `config/embedding_source_paths.py` should be edited so that the `ROOT`,
 
 The required Python packages can be installed using `pip install -r requirements.txt` or `pip3 install -r requirements.txt`.
 
-##Additional files
+## Additional files
 
 The datasets of the predictions obtained for each of the top six Knowledge Graph Embedding Models (KGEMs) for pairs classified as pathogenic can be found in the dropbox https://www.dropbox.com/scl/fo/hpv6dv5zwmdpnsdpnmu6u/AJAOxJwTKdK6XSvLm-0hoS8?rlkey=0rukv282233tnfwvv2n5y6ws9&st=tms6onou&dl=0 .
 
