@@ -11,3 +11,8 @@ The file `config/embedding_source_paths.py` should be edited so that the `ROOT`,
 
 The required Python packages can be installed using `pip install -r requirements.txt` or `pip3 install -r requirements.txt`.
 
+##Additional files
+
+The datasets of the predictions obtained for each of the top six Knowledge Graph Embedding Models (KGEMs) for pairs classified as pathogenic can be found in the dropbox https://www.dropbox.com/scl/fo/hpv6dv5zwmdpnsdpnmu6u/AJAOxJwTKdK6XSvLm-0hoS8?rlkey=0rukv282233tnfwvv2n5y6ws9&st=tms6onou&dl=0 .
+
+Additionally, the results generated and the files necessary to train, predict and evaluate the top pipelines for these six KGEMs are found at https://1drv.ms/f/c/b0194f3bfe765170/Et_hj72j2DVFlYKxWn7Eb1IBac6Z3cGH1b35xOy8HWnx2Q . In order to integrate these files in the repository, add them in the folder `benchmarking_KGEMs_oligogenic/results/top_models`. The file `bock_pickled.bin` - a binary file containing the BOCK knowledge graph - can also be found with this link and should be added in the folder `benchmarking_KGEMs_oligogenic/data/Datasets`.
