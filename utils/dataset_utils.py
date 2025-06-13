@@ -52,11 +52,12 @@ def rvis_mapping():
 
     for row in f:
         gene_name = row[0]
-        ensembl_id_set = hgnc_to_ensembl_dict[gene_name]
-        rvis_value = float(row[1])
+        if gene_name in hgnc_to_ensembl_dict:
+            ensembl_id_set = hgnc_to_ensembl_dict[gene_name]
+            rvis_value = float(row[1])
 
-        for id in ensembl_id_set:
-            mapping_dict[id] = rvis_value
+            for id in ensembl_id_set:
+                mapping_dict[id] = rvis_value
 
     return mapping_dict
 
@@ -89,15 +90,37 @@ def hgnc_ensembl_mapper():
                 hgnc_id = split_row[1]
                 ensembl_id = split_row[-1][:-1]
 
-                if hgnc_id not in hgnc_to_ensembl_dict:
-                    hgnc_to_ensembl_dict[hgnc_id] = [ensembl_id]
+                temp_list = []
+                if "," in split_row[4]:
+                    temp_list.extend(split_row[4].split(","))
                 else:
-                    hgnc_to_ensembl_dict[hgnc_id].append(ensembl_id)
+                    temp_list.append(split_row[4])
 
-                if ensembl_id not in ensembl_to_hgnc_dict:
-                    ensembl_to_hgnc_dict[ensembl_id] = [hgnc_id]
+                if "," in split_row[5]:
+                    temp_list.extend(split_row[5].split(","))
                 else:
-                    ensembl_to_hgnc_dict[ensembl_id].append(hgnc_id)
+                    temp_list.append(split_row[5])
+
+                alias_id_list = []
+                for el in temp_list:
+                    if len(el) > 0:
+                        if " " == el[0]:
+                            alias_id_list.append(el[1:])
+                        else:
+                            alias_id_list.append(el)
+
+                alias_id_list.append(hgnc_id)
+
+                for ids in alias_id_list:
+                    if ids not in hgnc_to_ensembl_dict:
+                        hgnc_to_ensembl_dict[ids] = [ensembl_id]
+                    else:
+                        hgnc_to_ensembl_dict[ids].append(ensembl_id)
+
+                    if ensembl_id not in ensembl_to_hgnc_dict:
+                        ensembl_to_hgnc_dict[ensembl_id] = [ids]
+                    else:
+                        ensembl_to_hgnc_dict[ensembl_id].append(ids)
 
     return hgnc_to_ensembl_dict, ensembl_to_hgnc_dict
 
