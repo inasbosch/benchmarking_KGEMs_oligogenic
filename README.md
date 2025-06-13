@@ -16,3 +16,12 @@ The required Python packages can be installed using `pip install -r requirements
 The datasets of the predictions obtained for each of the top six Knowledge Graph Embedding Models (KGEMs) for pairs classified as pathogenic can be found in the dropbox https://www.dropbox.com/scl/fo/hpv6dv5zwmdpnsdpnmu6u/AJAOxJwTKdK6XSvLm-0hoS8?rlkey=0rukv282233tnfwvv2n5y6ws9&st=tms6onou&dl=0 .
 
 Additionally, the results generated and the files necessary to train, predict and evaluate the top pipelines for these six KGEMs are found at https://1drv.ms/f/c/b0194f3bfe765170/Et_hj72j2DVFlYKxWn7Eb1IBac6Z3cGH1b35xOy8HWnx2Q . In order to integrate these files in the repository, add them in the folder `benchmarking_KGEMs_oligogenic/results/top_models`. The file `bock_pickled.bin` - a binary file containing the BOCK knowledge graph - can also be found with this link and should be added in the folder `benchmarking_KGEMs_oligogenic/data/Datasets`.
+
+## Tutorial
+
+Once all the necessary files have been downloaded, five different commands can be used.
+- `python3 main.py train` allows to train a new model with the indicated parameters.
+- `python3 main.py predict` uses a previously trained model to generate predictions on a provided tab-delimited file of gene pairs.
+- `python3 main.py evaluate` uses cross-validation on a provided model or for the indicated parameters. Add `-stratified True` to use a stratified cross-validation approach.
+- `python3 main.py stratify` generates stratified folds for the provided model.
+- `python3 main.py independent` generates the results shown in the article on the holdout set for a provided model.
