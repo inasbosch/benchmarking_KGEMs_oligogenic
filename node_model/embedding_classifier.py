@@ -69,7 +69,7 @@ class Classifier():
             self.embedding_model.label_to_id = self.embedding_model.load_label_to_id()
 
         if not hasattr(self.embedding_model, 'embeddings'):
-            self.embedding_model.embeddings = self.embedding_model.load_label_to_id()
+            self.embedding_model.embeddings = self.embedding_model.load_embeddings()
 
         if (pair[0] in self.embedding_model.label_to_id) and (pair[1] in self.embedding_model.label_to_id):
             id1 = self.embedding_model.label_to_id[pair[0]]
