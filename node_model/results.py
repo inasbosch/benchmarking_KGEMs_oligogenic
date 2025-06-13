@@ -415,6 +415,7 @@ class SingleResults(Results):
             "ROC": self.results_dict["ROC"],
             "PR": self.results_dict["PR"]
         }
+        print("Saving results at " + self.result_folder+"/results"+self.fig_add+".json")
         with open(self.result_folder+"/results"+self.fig_add+".json","w") as f:
             json.dump(result_dict,f)
 
