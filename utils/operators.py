@@ -10,7 +10,7 @@ class Operator():
 
     def __init__(self, function):
         self.function = function
-        if self.rvis:
+        if self.rvis and self.function.__name__ != "rvis_concatenate":
             self.__name__ = "rvis_"+self.function.__name__
         else:
             self.__name__ = self.function.__name__
@@ -36,7 +36,7 @@ class RVISConcatenateOperator(Operator):
     def __init__(self):
         self.double = False
         self.rvis = True
-        super().__init__(concatenate)
+        super().__init__(rvis_concatenate)
 
 
 class AverageOperator(Operator):
