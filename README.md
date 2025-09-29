@@ -1,5 +1,7 @@
 # benchmarking_KGEMs_oligogenic
 
+[![DOI](https://zenodo.org/badge/994345688.svg)](https://doi.org/10.5281/zenodo.17225879)
+
 ## Setting up
 
 The usage of this repository requires first the download of two separate github repositories and the datasetset of predictions of the DIEP model. 
@@ -35,3 +37,4 @@ Once all the necessary files have been downloaded, five different commands can b
 - `python3 main.py evaluate` uses cross-validation on a provided model or for the indicated parameters. Add `-stratified True` to use a stratified cross-validation approach.
 - `python3 main.py stratify` generates stratified folds for the provided model.
 - `python3 main.py independent` generates the results shown in the article on the holdout set for a provided model.
+
