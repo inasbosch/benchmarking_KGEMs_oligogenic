@@ -21,6 +21,8 @@ The datasets of the predictions obtained for each of the top six Knowledge Graph
 <li> QuatE: https://doi.org/10.5281/zenodo.17187536 </li>
 <li> ERMLP: https://doi.org/10.5281/zenodo.17192335 </li>
 
+
+
 In order to integrate these files in the repository, add them in the folder `benchmarking_KGEMs_oligogenic/results/top_models`. The file `bock_pickled.bin` - a binary file containing the BOCK knowledge graph - can also be found with this link and should be added in the folder `benchmarking_KGEMs_oligogenic/data/Datasets`.
 
 ## Tutorial
