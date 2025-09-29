@@ -23,7 +23,9 @@ The datasets of the predictions obtained for each of the top six Knowledge Graph
 
 
 
-In order to integrate these files in the repository, add them in the folder `benchmarking_KGEMs_oligogenic/results/top_models`. The file `bock_pickled.bin` - a binary file containing the BOCK knowledge graph - can also be found with this link and should be added in the folder `benchmarking_KGEMs_oligogenic/data/Datasets`.
+In order to integrate these files in the repository, add them in the folder `benchmarking_KGEMs_oligogenic/results/top_models`. 
+
+The file `bock_new.graphml` - a GraphML file containing the BOCK knowledge graph - can also be found on Zenodo (https://doi.org/10.5281/zenodo.14979916) and should be added in the folder `benchmarking_KGEMs_oligogenic/data/Datasets`. Then run `python3 generate_bock.py` to generate the binary file 'bock_pickled.bin'.
 
 ## Tutorial
 
